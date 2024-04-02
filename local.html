@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm thời trang</title>
+    <script src="local.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 15px;
+        }
+
+        a {
+            margin-bottom: 15px;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        th {
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body onload="showman()">
+    <h2>Thêm sản phẩm</h2>
+    <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="text" class="form-control" id="id">
+    </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+        <label for="code">Describe:</label>
+        <input type="text" class="form-control" id="code">
+    </div>
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="text" class="form-control" id="price">
+    </div>
+    <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="text" class="form-control" id="image">
+    </div>
+    <div class="form-group">
+        <center>
+            <input type="button" class="btn btn-primary" value="Save" onclick="save()">
+            <input type="button" class="btn btn-info" value="Update" onclick="update()">
+            <!-- <input type="button" class="btn btn-danger" value="Delete" onclick="delete1()"> -->
+            <input type="button" class="btn btn-warning" value="Reset" onclick="reset()">
+            <a href="home.html" class="btn btn-secondary">Home</a>
+        </center>
+    </div>
+
+    <h1 class="text-center">THỜI TRANG </h1>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>STT</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Describe</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="tblman"></tbody>
+    </table>
+</body>
+
+</html>
